@@ -1,0 +1,17 @@
+{
+  "name": "form-wizard",
+  "version": "0.1.0",
+  "description": "Multi Stage Form Wizard",
+  "repository": "https://github.com/kelvinlwy/form-wizard-challenge.git",
+  "author": "Kelvin",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": []
+  }
+}
