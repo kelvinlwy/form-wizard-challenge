@@ -10,7 +10,72 @@
 <body>
 
 <main>
+    <div class="fw">
+        <h1 class="fw__title">Form Wizard</h1>
 
+        <div class="fw__progress">
+            <ul class="fw__breadcrumbs">
+                <li class="fw__breadcrumbs__item">
+                    <div class="fw__breadcrumbs__element">1</div>
+                </li>
+                <li class="fw__breadcrumbs__item">
+                    <div class="fw__breadcrumbs__element">2</div>
+                </li>
+                <li class="fw__breadcrumbs__item">
+                    <div class="fw__breadcrumbs__element"><span class="done"></span></div>
+                </li>
+            </ul>
+        </div>
+
+        <form id="form" class="fw__wrapper" novalidate>
+            <fieldset class="fw__inputs fw__step">
+                <input type="text" name="firstname" placeholder="First Name*"/>
+
+                <input type="text" name="lastname" placeholder="Last Name*"/>
+
+                <input type="email" name="email" placeholder="Email*"/>
+
+                <input type="text" name="phone" placeholder="Phone"/>
+
+                <div class="fw__inputs__error"><p class="fw__inputs__error--message"></p></div>
+
+                <input class="fw__button" type="button" value="Next"/>
+            </fieldset>
+
+            <fieldset class="fw__inputs fw__step">
+                <input type="number" name="stnumber" placeholder="Street Number*"/>
+
+                <input type="text" name="stname" placeholder="Street Name*"/>
+
+                <label for="sttype" class="fw__inputs__label fw__inputs__label--inline">Street Type*</label>
+                <select id="sttype" class="fw__inputs__selector" name="sttype">
+                    <option value="" disabled selected hidden>Please select one...</option>
+                    <option value="cl">Cl</option>
+                    <option value="ct">Ct</option>
+                    <option value="st">St</option>
+                    <option value="pl">Pl</option>
+                    <option value="ave">Ave</option>
+                </select>
+
+                <input type="text" name="suburb" placeholder="Suburb*"/>
+
+                <input type="text" name="postcode" placeholder="Postcode*"/>
+
+                <div class="fw__inputs__error"><p class="fw__inputs__error--message"></p></div>
+
+                <input class="fw__button fw__button--negative" type="button" value="Back"/>
+                <input class="fw__button" type="submit" value="Submit"/>
+            </fieldset>
+
+            <section class="fw__result fw__step">
+                <h4 class="fw__result__title">Your Details</h4>
+
+                <div id="results"></div>
+
+                <input class="fw__button fw__result__button" type="button" value="Start Over"/>
+            </section>
+        </form>
+    </div>
 </main>
 
 <script src="js/index.js"></script>
