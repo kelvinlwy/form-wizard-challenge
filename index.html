@@ -39,7 +39,7 @@
 
                 <div class="fw__inputs__error"><p class="fw__inputs__error--message"></p></div>
 
-                <input class="fw__button" type="button" value="Next" onclick="next()"/>
+                <input id="next" class="fw__button" type="button" value="Next" onclick="next()"/>
             </fieldset>
 
             <fieldset class="fw__inputs fw__step">
@@ -48,13 +48,13 @@
                 <input type="text" name="stname" placeholder="Street Name*" data-label="Street Name" data-validation="required"/>
 
                 <label for="sttype" class="fw__inputs__label fw__inputs__label--inline">Street Type*</label>
-                <select id="sttype" class="fw__inputs__selector" name="sttype" data-label="Street Type" data-validation="select">
+                <select id="sttype" class="fw__inputs__selector" name="sttype" data-label="Street Type" data-validation="required select">
                     <option value="" disabled selected hidden>Please select one...</option>
-                    <option value="cl">Cl</option>
-                    <option value="ct">Ct</option>
-                    <option value="st">St</option>
-                    <option value="pl">Pl</option>
-                    <option value="ave">Ave</option>
+                    <option value="Cl">Cl</option>
+                    <option value="Ct">Ct</option>
+                    <option value="St">St</option>
+                    <option value="Pl">Pl</option>
+                    <option value="Ave">Ave</option>
                 </select>
 
                 <input type="text" name="suburb" placeholder="Suburb*" data-label="Suburb" data-validation="required"/>
@@ -63,8 +63,8 @@
 
                 <div class="fw__inputs__error"><p class="fw__inputs__error--message"></p></div>
 
-                <input class="fw__button fw__button--negative" type="button" value="Back" onclick="back()"/>
-                <input class="fw__button" type="submit" value="Submit"/>
+                <input id="back" class="fw__button fw__button--negative" type="button" value="Back" onclick="back()"/>
+                <input id="submit" class="fw__button" type="submit" value="Submit"/>
             </fieldset>
 
             <section class="fw__result fw__step">
@@ -72,7 +72,7 @@
 
                 <div id="results"></div>
 
-                <input class="fw__button fw__result__button" type="button" value="Start Over" onclick="init()">
+                <input id="startover" class="fw__button fw__result__button" type="button" value="Start Over" onclick="init()">
             </section>
         </form>
     </div>
