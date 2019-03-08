@@ -47,3 +47,7 @@ Some rules to follow:
     * Browser testing is optional
 * Code must be version controlled
 * Result must be returned in .zip format, including source controlled files (e.g. .git).
+
+### Remarks
+
+* The street type dropdown does work on PCs with Edge, but doesn't work in Edge on VM 
