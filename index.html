@@ -29,26 +29,26 @@
 
         <form id="form" class="fw__wrapper" novalidate>
             <fieldset class="fw__inputs fw__step">
-                <input type="text" name="firstname" placeholder="First Name*"/>
+                <input type="text" name="firstname" placeholder="First Name*" data-label="First Name" data-validation="required"/>
 
-                <input type="text" name="lastname" placeholder="Last Name*"/>
+                <input type="text" name="lastname" placeholder="Last Name*" data-label="Last Name" data-validation="required"/>
 
-                <input type="email" name="email" placeholder="Email*"/>
+                <input type="email" name="email" placeholder="Email*" data-validation="required email" data-label="Email" />
 
-                <input type="text" name="phone" placeholder="Phone"/>
+                <input type="text" name="phone" placeholder="Phone" data-label="Phone" data-validation="phone"/>
 
                 <div class="fw__inputs__error"><p class="fw__inputs__error--message"></p></div>
 
-                <input class="fw__button" type="button" value="Next"/>
+                <input class="fw__button" type="button" value="Next" onclick="next()"/>
             </fieldset>
 
             <fieldset class="fw__inputs fw__step">
-                <input type="number" name="stnumber" placeholder="Street Number*"/>
+                <input type="number" name="stnumber" placeholder="Street Number*" data-label="Street Number" data-validation="required naturalNumber"/>
 
-                <input type="text" name="stname" placeholder="Street Name*"/>
+                <input type="text" name="stname" placeholder="Street Name*" data-label="Street Name" data-validation="required"/>
 
                 <label for="sttype" class="fw__inputs__label fw__inputs__label--inline">Street Type*</label>
-                <select id="sttype" class="fw__inputs__selector" name="sttype">
+                <select id="sttype" class="fw__inputs__selector" name="sttype" data-label="Street Type" data-validation="select">
                     <option value="" disabled selected hidden>Please select one...</option>
                     <option value="cl">Cl</option>
                     <option value="ct">Ct</option>
@@ -57,13 +57,13 @@
                     <option value="ave">Ave</option>
                 </select>
 
-                <input type="text" name="suburb" placeholder="Suburb*"/>
+                <input type="text" name="suburb" placeholder="Suburb*" data-label="Suburb" data-validation="required"/>
 
-                <input type="text" name="postcode" placeholder="Postcode*"/>
+                <input type="text" name="postcode" placeholder="Postcode*" data-label="Postcode" data-validation="required postcode"/>
 
                 <div class="fw__inputs__error"><p class="fw__inputs__error--message"></p></div>
 
-                <input class="fw__button fw__button--negative" type="button" value="Back"/>
+                <input class="fw__button fw__button--negative" type="button" value="Back" onclick="back()"/>
                 <input class="fw__button" type="submit" value="Submit"/>
             </fieldset>
 
@@ -72,7 +72,7 @@
 
                 <div id="results"></div>
 
-                <input class="fw__button fw__result__button" type="button" value="Start Over"/>
+                <input class="fw__button fw__result__button" type="button" value="Start Over" onclick="init()">
             </section>
         </form>
     </div>
