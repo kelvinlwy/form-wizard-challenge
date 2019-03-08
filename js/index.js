@@ -98,7 +98,7 @@ const validations = {
   },
 
   phone: function (val) {
-    return val.match(/(?:\+?61)?(?:\(0\)[23478]|\(?0?[23478]\)?)\d{8}/) ? false : "is invalid!";
+    return val.toString().match(/(?:\+?61)?(?:\(0\)[23478]|\(?0?[23478]\)?)\d{8}/) ? false : "is invalid!";
   },
 
   email: function (val) {
@@ -119,7 +119,7 @@ const validations = {
   },
 
   select: function (selectedIndex) {
-    return selectedIndex !== 0 ? false : "is required";
+    return selectedIndex !== 0 && selectedIndex !== '' ? false : "is required!";
   }
 };
 
@@ -216,3 +216,10 @@ function showResult() {
 }
 
 init();
+
+module.exports = {
+  validate,
+  next,
+  back,
+  init
+};
